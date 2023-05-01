@@ -1,0 +1,13 @@
+:root {
+  
+}
+
+body {
+  height: 100vh;
+}
+
+#__next {
+  @apply h-full overflow-hidden 
+          text-$text
+          flex;
+}

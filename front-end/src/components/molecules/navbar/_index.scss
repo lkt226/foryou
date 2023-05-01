@@ -1,0 +1,48 @@
+#navbar {
+    @apply relative;
+    min-width: 68px;
+  
+    ._content {
+      @apply absolute left-0 top-0
+              h-full py-5 px-4
+              flex flex-col justify-between
+              bg-$bg1;
+
+      ._menu {
+        @apply flex flex-col gap-3;
+
+        ._submenu {
+          @apply p-2 bg-$bg2 rounded
+                  flex flex-col gap-2
+                  transform origin-top-left 
+                  scale-0 max-w-0;
+          transition: all 0.25s;
+
+          &.opened {
+            @apply scale-100;
+            max-width: 20rem;
+          }
+
+          a {
+            @apply font-bold uppercase 
+                    flex flex-col w-max;
+
+            &::after {
+              content: '';
+              @apply w-full bg-$secondary max-w-0;
+              height: 2px;
+              transition: max-width 0.25s;
+            }
+
+            &:hover::after {
+              max-width: 1rem;
+            }
+
+            &[data-active="true"]::after {
+              max-width: 30rem;
+            }
+          }
+        }
+      }
+    }
+}

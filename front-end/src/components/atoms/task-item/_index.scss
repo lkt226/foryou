@@ -1,0 +1,9 @@
+._task_item {
+  background-color: var(--color);
+  max-width: 310px;
+  @apply font-bold p-1;
+
+  ._icon {
+    @apply ml-16;
+  }
+}

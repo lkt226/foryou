@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* IMPORTS */
+@import 'default';
+@import 'container';
+
+@import '@/components';
+@import '@/pages';
