@@ -1,21 +1,17 @@
 import TaskItem from "@/components/atoms/task-item"
 
-const tasks = [
-  {
-    uid: 'hu3ijd3ji3ji',
-    name: 'Escovar dentes',
-    color: '#f32626',
-    category: 'work',
-    start_date: new Date(Date.UTC(2012, 11, 20, 3, 0, 0)),
-    end_date: new Date,
-    stage: 'complete',
+export default function GroupTasks ({ title, tasks }) {
+  const handleChangeClass = (e: MouseEvent) => {
+    const target = e.target as HTMLElement
+    const parent = target.parentElement
+    parent.classList.toggle('active')
   }
-]
 
-export default function TodayTasks () {
   return (
-    <div id="today-tasks">
-      <h2>Tarefas do dia</h2>
+    <div id="group-tasks">
+      <h3 onClick={(e) => handleChangeClass(e)}>
+        { title }
+      </h3>
       <ol>
         {
           tasks.map((task) => (

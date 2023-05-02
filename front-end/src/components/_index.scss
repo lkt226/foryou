@@ -1,5 +1,7 @@
-@import 'molecules/navbar';
-@import 'molecules/today-tasks/';
-
 @import 'atoms/menu-button';
 @import 'atoms/task-item';
+
+@import 'molecules/group-tasks/';
+
+@import 'organisms/navbar';
+@import 'organisms/today-tasks/';

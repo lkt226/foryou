@@ -1,0 +1,28 @@
+#group-tasks {
+  @apply flex flex-col gap-2;
+
+  h3 {
+    @apply cursor-pointer;
+
+    &::after {
+      content: '▼';
+      @apply absolute origin-center transform scale-y-75;
+      transition: transform 0.15s ease-in;
+    }
+  }
+  
+  ol {
+    @apply transform origin-top;
+    transition: transform 0.15s ease-in;
+  }
+
+  &.active {
+    h3::after {
+      @apply rotate-180;
+    }
+
+    ol {
+      @apply scale-y-0 max-h-0;
+    }
+  }
+}
