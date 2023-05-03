@@ -2,7 +2,11 @@
   @apply bg-$bg3 p-4
             flex flex-col gap-8;
 
-  h2 {
-    @apply text-center;
+  .title {
+    @apply flex justify-center;
+  }
+
+  ._new_tasks {
+    @apply flex flex-col gap-3;
   }
 }

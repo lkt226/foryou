@@ -2,12 +2,13 @@
   @apply flex flex-col gap-2;
 
   h3 {
-    @apply cursor-pointer;
+    @apply cursor-pointer relative max-w-max;
 
     &::after {
       content: '▼';
       @apply absolute origin-center transform scale-y-75;
       transition: transform 0.15s ease-in;
+      left: calc(100% + 10px);
     }
   }
   

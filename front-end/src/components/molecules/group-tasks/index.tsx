@@ -1,15 +1,20 @@
 import TaskItem from "@/components/atoms/task-item"
+import { useState } from "react"
 
 export default function GroupTasks ({ title, tasks }) {
-  const handleChangeClass = (e: MouseEvent) => {
-    const target = e.target as HTMLElement
-    const parent = target.parentElement
-    parent.classList.toggle('active')
+  const [active, setActive] = useState(false)
+
+  const groupTasksClass = [
+    active ? 'active': ''
+  ]
+
+  const handleChangeEditClass = () => {
+    setActive(!active)
   }
 
   return (
-    <div id="group-tasks">
-      <h3 onClick={(e) => handleChangeClass(e)}>
+    <div id="group-tasks" className={groupTasksClass}>
+      <h3 onClick={handleChangeEditClass}>
         { title }
       </h3>
       <ol>

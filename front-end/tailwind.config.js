@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         '$primary' : '#ABE6FC',
         '$secondary' : '#31A3CD',
+        '$tertiary': '#FACE8D',
 
         '$text' :' #3f3f3',
 

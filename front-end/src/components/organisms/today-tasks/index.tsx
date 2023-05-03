@@ -15,13 +15,28 @@ const tasks = [
 export default function TodayTasks () {
   return (
     <div id="today-tasks">
-      <h2>Tarefas do dia</h2>
+      <header className="title">
+        <h2>Tarefas do dia</h2>
+      </header>
       <ul>
         <GroupTasks
-          title="Manha"
+          title="Rotina"
           tasks={tasks}
         />
       </ul>
+      <ul>
+        <GroupTasks
+          title="Hoje"
+          tasks={tasks}
+        />
+      </ul>
+      <div className="_new_tasks">
+        <hr />
+        <button id="add-task" className="default_button small">
+          Adicionar tarefa
+          <i className="fa-solid fa-plus"></i>
+        </button>
+      </div>
     </div>
   )
 }
