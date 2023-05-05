@@ -1,7 +1,7 @@
 #group-tasks {
   @apply flex flex-col gap-2;
 
-  h3 {
+  h4 {
     @apply cursor-pointer relative max-w-max;
 
     &::after {
@@ -18,7 +18,7 @@
   }
 
   &.active {
-    h3::after {
+    h4::after {
       @apply rotate-180;
     }
 

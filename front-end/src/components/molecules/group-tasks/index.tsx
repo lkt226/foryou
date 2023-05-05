@@ -14,9 +14,9 @@ export default function GroupTasks ({ title, tasks }) {
 
   return (
     <div id="group-tasks" className={groupTasksClass}>
-      <h3 onClick={handleChangeEditClass}>
+      <h4 onClick={handleChangeEditClass}>
         { title }
-      </h3>
+      </h4>
       <ol>
         {
           tasks.map((task) => (

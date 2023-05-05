@@ -18,9 +18,10 @@ export default function TodayTasks () {
       <header className="title">
         <h2>Tarefas do dia</h2>
       </header>
+      <h3>Rotina</h3>
       <ul>
         <GroupTasks
-          title="Rotina"
+          title="Manha"
           tasks={tasks}
         />
       </ul>
