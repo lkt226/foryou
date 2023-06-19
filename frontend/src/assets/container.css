@@ -1,0 +1,8 @@
+:root {
+  --container: 1200px;
+}
+
+.container {
+  @apply w-full mx-auto;
+  max-width: var(--container);
+}
